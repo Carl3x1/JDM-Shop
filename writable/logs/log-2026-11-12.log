@@ -1,0 +1,51 @@
+ERROR - 2026-11-12 11:37:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'jdm_shop_db' in C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\MySQLi\Connection.php:200
+Stack trace:
+#0 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\MySQLi\Connection.php(200): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'jdm_shop_db', 3307, '', 0)
+#1 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(1709): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\jdm_shop\jdm_shop\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\jdm_shop\jdm_shop\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\jdm_shop\jdm_shop\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'jdm_shop_db' in C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\MySQLi\Connection.php:230
+Stack trace:
+#0 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Database\BaseConnection.php(1709): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\jdm_shop\jdm_shop\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\jdm_shop\jdm_shop\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#7 C:\xampp\htdocs\jdm_shop\jdm_shop\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\xampp\htdocs\jdm_shop\jdm_shop\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2026-11-12 11:37:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'jdm_shop_db'
+[Method: CLI, Route: db:table/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 601.
+ 1 SYSTEMPATH\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1709): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `jdm_shop_db`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\ShowTableInfo->run([...])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [...])
+ 6 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-11-12 12:49:27 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(80): CodeIgniter\Database\Database->load([...], 'tests')
+ 3 C:\xampp\htdocs\jdm_shop\test_auth.php(12): CodeIgniter\Database\Config::connect()
+DEBUG - 2026-11-12 11:50:36 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 11:50:55 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 11:53:42 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 11:57:06 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 11:57:28 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 11:58:06 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-11-12 23:59:44 --> Session: Initialization under CLI aborted.
